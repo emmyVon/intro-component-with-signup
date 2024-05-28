@@ -77,13 +77,14 @@ input {
   display: block;
   width: 100%;
   padding: 1rem 1.5rem;
-  margin-bottom: 1.2rem;
+  /* margin-bottom: 1.2rem; */
   border: 1px solid var(--grayish-blue);
   border-radius: 0.5rem;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  height: 100%;
 }
 
 input.error {
@@ -92,7 +93,7 @@ input.error {
 
 input:hover,
 input:focus {
-  outline: 1.5px solid var(--blue);
+  border: 1.5px solid var(--blue) !important;
 }
 
 button {
@@ -107,6 +108,7 @@ button {
   font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 small {
@@ -121,4 +123,39 @@ small span {
   color: var(--red);
   font-weight: 600;
   cursor: pointer;
+}
+label{
+ margin-bottom: 1.2rem;
+ display: block;
+ flex-direction: column;
+ position: relative;
+}
+
+.error-circle{
+display: flex;
+  flex-direction: column;
+  position: relative;
+} 
+.error-circle::after{
+  content: '!';
+  background-color: var(--red);
+  height: 2rem;
+  width: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 0.3rem;
+  top:0.9rem
+}
+
+.error-text{
+  color: var(--red);
+  align-self: flex-end;
+}
+
+@media (max-width:760px) {
+.container{
+  flex-direction: column;
+}
 }
