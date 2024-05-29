@@ -90,6 +90,9 @@ input {
 input.error {
   border: 1px solid var(--red);
 }
+input.error[type='email']::placeholder{
+  color: var(--red);
+}
 
 input:hover,
 input:focus {
@@ -139,6 +142,7 @@ display: flex;
 .error-circle::after{
   content: '!';
   background-color: var(--red);
+  color: white;
   height: 2rem;
   width: 2rem;
   display: grid;
@@ -157,5 +161,17 @@ display: flex;
 @media (max-width:760px) {
 .container{
   flex-direction: column;
+  gap: 2rem;
 }
+.container-text > *{
+  text-align: center;
+}
+.error-circle::after{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+h1{
+  font-size: 1.5rem;
+}
+
 }

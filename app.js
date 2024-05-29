@@ -30,6 +30,7 @@ form.addEventListener('submit', (e) => {
       error.textContent = 'FirstName cannot be empty'
       firstName.parentElement.appendChild(error)
       firstName.parentElement.classList.add('error-circle')
+      firstName.placeholder = ''
     
   } else {
     firstName.classList.remove('error');
@@ -44,6 +45,7 @@ form.addEventListener('submit', (e) => {
     error.textContent = 'LastName cannot be empty'
       lastName.parentElement.appendChild(error)
       lastName.parentElement.classList.add('error-circle')
+      lastName.placeholder = ''
   } else {
     lastName.classList.remove('error');
     lastName.parentElement.classList.remove('error-circle')
@@ -54,9 +56,10 @@ form.addEventListener('submit', (e) => {
     email.classList.add('error');
     const error = document.createElement('p');
     error.classList.add('error-text')
-    error.textContent = 'email cannot be empty'
+    error.textContent = "this doesn't look an email"
     email.parentElement.appendChild(error)
     email.parentElement.classList.add('error-circle')
+    email.placeholder = 'example@gmail.com'
   } else {
     email.classList.remove('error');
     email.parentElement.classList.remove('error-circle')
@@ -71,6 +74,7 @@ form.addEventListener('submit', (e) => {
      error.textContent = 'password cannot be empty'
     password.parentElement.appendChild(error)
     password.parentElement.classList.add('error-circle')
+    password.placeholder = ''
   } else {
     password.classList.remove('error');
     password.parentElement.classList.remove('error-circle')
